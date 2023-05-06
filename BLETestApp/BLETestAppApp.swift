@@ -7,11 +7,19 @@
 
 import SwiftUI
 
+
 @main
 struct BLETestAppApp: App {
+    @StateObject var state: AppState = AppState();
+
+    init() {
+        
+    }
+
     var body: some Scene {
-        WindowGroup {
+        WindowGroup(id: "main") {
             ContentView()
+                .environmentObject(state)
         }
     }
 }

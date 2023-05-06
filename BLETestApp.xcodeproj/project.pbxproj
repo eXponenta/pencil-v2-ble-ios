@@ -11,6 +11,8 @@
 		DEAE812B2A06CC7D002C97E4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAE812A2A06CC7D002C97E4 /* ContentView.swift */; };
 		DEAE812D2A06CC7E002C97E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEAE812C2A06CC7E002C97E4 /* Assets.xcassets */; };
 		DEAE81302A06CC7E002C97E4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEAE812F2A06CC7E002C97E4 /* Preview Assets.xcassets */; };
+		DEAE813A2A06D136002C97E4 /* MainTempView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAE81392A06D136002C97E4 /* MainTempView.swift */; };
+		DEAE813C2A06E390002C97E4 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAE813B2A06E390002C97E4 /* AppState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		DEAE812A2A06CC7D002C97E4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DEAE812C2A06CC7E002C97E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DEAE812F2A06CC7E002C97E4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DEAE81392A06D136002C97E4 /* MainTempView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTempView.swift; sourceTree = "<group>"; };
+		DEAE813B2A06E390002C97E4 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,8 @@
 		DEAE81272A06CC7D002C97E4 /* BLETestApp */ = {
 			isa = PBXGroup;
 			children = (
+				DEAE813D2A06F9A5002C97E4 /* State */,
+				DEAE81382A06CEA6002C97E4 /* Components */,
 				DEAE81282A06CC7D002C97E4 /* BLETestAppApp.swift */,
 				DEAE812A2A06CC7D002C97E4 /* ContentView.swift */,
 				DEAE812C2A06CC7E002C97E4 /* Assets.xcassets */,
@@ -65,6 +71,22 @@
 				DEAE812F2A06CC7E002C97E4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DEAE81382A06CEA6002C97E4 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				DEAE81392A06D136002C97E4 /* MainTempView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		DEAE813D2A06F9A5002C97E4 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				DEAE813B2A06E390002C97E4 /* AppState.swift */,
+			);
+			path = State;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +161,8 @@
 			files = (
 				DEAE812B2A06CC7D002C97E4 /* ContentView.swift in Sources */,
 				DEAE81292A06CC7D002C97E4 /* BLETestAppApp.swift in Sources */,
+				DEAE813A2A06D136002C97E4 /* MainTempView.swift in Sources */,
+				DEAE813C2A06E390002C97E4 /* AppState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
