@@ -18,8 +18,6 @@ class BLEManager: NSObject, ObservableObject {
     
     private var centralManager: CBCentralManager;
     
-    public var bulkService: BulkService = BulkService();
-    
     private var services: [any Service] = [];
     
     private var pollTimer: Timer?;
@@ -32,12 +30,17 @@ class BLEManager: NSObject, ObservableObject {
     
     override init() {
         self.centralManager = CBCentralManager();
-        
-        self.services.append(self.bulkService);
-        
+
         super.init()
         
         self.centralManager.delegate = self;
+    }
+    
+    func attach(service: any Service) {
+        // ignore same service operator
+        if (services.first(where: { $0.UUID.isEqual(service.UUID) }) == nil) {
+            services.append(service);
+        }
     }
     
     func scan() {

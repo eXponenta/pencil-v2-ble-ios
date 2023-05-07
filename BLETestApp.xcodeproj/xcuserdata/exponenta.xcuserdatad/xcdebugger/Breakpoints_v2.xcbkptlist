@@ -14,8 +14,8 @@
             filePath = "BLETestApp/BLE/BLEManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
             landmarkName = "updateData()"
             landmarkType = "7">
          </BreakpointContent>
@@ -23,109 +23,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4F269AA8-F6FC-4A27-AB65-970B886CF1D5"
+            uuid = "980CB856-474A-41C4-89C3-F62B272DF685"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BLETestApp/BLE/BLEManager.swift"
+            filePath = "BLETestApp/BLE/Services/BulkService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "204"
-            endingLineNumber = "204"
-            landmarkName = "peripheral(_:didUpdateValueFor:error:)"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "queryRead(poll:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "4F269AA8-F6FC-4A27-AB65-970B886CF1D5 - 10dcbedeeec792b2"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BLETestApp.BLEManager.peripheral(_: __C.CBPeripheral, didUpdateValueFor: __C.CBCharacteristic, error: Swift.Optional&lt;Swift.Error&gt;) -&gt; ()"
-                  moduleName = "BLETestApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/exponenta/repos/BLETestApp/BLETestApp/BLETestApp/BLE/BLEManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "202"
-                  endingLineNumber = "202"
-                  offsetFromSymbolStart = "220">
-               </Location>
-               <Location
-                  uuid = "4F269AA8-F6FC-4A27-AB65-970B886CF1D5 - 10dcbedeeec792b2"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BLETestApp.BLEManager.peripheral(_: __C.CBPeripheral, didUpdateValueFor: __C.CBCharacteristic, error: Swift.Optional&lt;Swift.Error&gt;) -&gt; ()"
-                  moduleName = "BLETestApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/exponenta/repos/BLETestApp/BLETestApp/BLETestApp/BLE/BLEManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "202"
-                  endingLineNumber = "202"
-                  offsetFromSymbolStart = "432">
-               </Location>
-               <Location
-                  uuid = "4F269AA8-F6FC-4A27-AB65-970B886CF1D5 - c230b45a9669ded4"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (BLETestApp.Service) -&gt; Swift.Bool in BLETestApp.BLEManager.peripheral(_: __C.CBPeripheral, didUpdateValueFor: __C.CBCharacteristic, error: Swift.Optional&lt;Swift.Error&gt;) -&gt; ()"
-                  moduleName = "BLETestApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/exponenta/repos/BLETestApp/BLETestApp/BLETestApp/BLE/BLEManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "202"
-                  endingLineNumber = "202"
-                  offsetFromSymbolStart = "64">
-               </Location>
-               <Location
-                  uuid = "4F269AA8-F6FC-4A27-AB65-970B886CF1D5 - 10dcbedeeec792f4"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BLETestApp.BLEManager.peripheral(_: __C.CBPeripheral, didUpdateValueFor: __C.CBCharacteristic, error: Swift.Optional&lt;Swift.Error&gt;) -&gt; ()"
-                  moduleName = "BLETestApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/exponenta/repos/BLETestApp/BLETestApp/BLETestApp/BLE/BLEManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "204"
-                  endingLineNumber = "204"
-                  offsetFromSymbolStart = "256">
-               </Location>
-               <Location
-                  uuid = "4F269AA8-F6FC-4A27-AB65-970B886CF1D5 - 10dcbedeeec792f4"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "BLETestApp.BLEManager.peripheral(_: __C.CBPeripheral, didUpdateValueFor: __C.CBCharacteristic, error: Swift.Optional&lt;Swift.Error&gt;) -&gt; ()"
-                  moduleName = "BLETestApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/exponenta/repos/BLETestApp/BLETestApp/BLETestApp/BLE/BLEManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "204"
-                  endingLineNumber = "204"
-                  offsetFromSymbolStart = "476">
-               </Location>
-               <Location
-                  uuid = "4F269AA8-F6FC-4A27-AB65-970B886CF1D5 - c230b45a9669de92"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (BLETestApp.Service) -&gt; Swift.Bool in BLETestApp.BLEManager.peripheral(_: __C.CBPeripheral, didUpdateValueFor: __C.CBCharacteristic, error: Swift.Optional&lt;Swift.Error&gt;) -&gt; ()"
-                  moduleName = "BLETestApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/exponenta/repos/BLETestApp/BLETestApp/BLETestApp/BLE/BLEManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "204"
-                  endingLineNumber = "204"
-                  offsetFromSymbolStart = "64">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

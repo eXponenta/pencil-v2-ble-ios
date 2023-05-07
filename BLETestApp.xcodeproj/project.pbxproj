@@ -16,6 +16,7 @@
 		DEAE81402A07EA0A002C97E4 /* BLEManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAE813F2A07EA0A002C97E4 /* BLEManager.swift */; };
 		DEAE81422A07EF79002C97E4 /* BulkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAE81412A07EF79002C97E4 /* BulkService.swift */; };
 		DEAE81442A07EFA1002C97E4 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAE81432A07EFA1002C97E4 /* Service.swift */; };
+		DEAE81472A081B0C002C97E4 /* BulkData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAE81462A081B0C002C97E4 /* BulkData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		DEAE813F2A07EA0A002C97E4 /* BLEManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEManager.swift; sourceTree = "<group>"; };
 		DEAE81412A07EF79002C97E4 /* BulkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulkService.swift; sourceTree = "<group>"; };
 		DEAE81432A07EFA1002C97E4 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		DEAE81462A081B0C002C97E4 /* BulkData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulkData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,10 +102,19 @@
 			isa = PBXGroup;
 			children = (
 				DEAE813F2A07EA0A002C97E4 /* BLEManager.swift */,
-				DEAE81412A07EF79002C97E4 /* BulkService.swift */,
-				DEAE81432A07EFA1002C97E4 /* Service.swift */,
+				DEAE81452A081A79002C97E4 /* Services */,
 			);
 			path = BLE;
+			sourceTree = "<group>";
+		};
+		DEAE81452A081A79002C97E4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DEAE81432A07EFA1002C97E4 /* Service.swift */,
+				DEAE81412A07EF79002C97E4 /* BulkService.swift */,
+				DEAE81462A081B0C002C97E4 /* BulkData.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEAE812B2A06CC7D002C97E4 /* ContentView.swift in Sources */,
+				DEAE81472A081B0C002C97E4 /* BulkData.swift in Sources */,
 				DEAE81442A07EFA1002C97E4 /* Service.swift in Sources */,
 				DEAE81292A06CC7D002C97E4 /* BLETestAppApp.swift in Sources */,
 				DEAE81402A07EA0A002C97E4 /* BLEManager.swift in Sources */,

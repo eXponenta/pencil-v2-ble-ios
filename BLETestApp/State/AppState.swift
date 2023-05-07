@@ -6,22 +6,29 @@
 //
 
 import Foundation
+import Combine
 
 class AppState: ObservableObject {
-    @Published var currentTemp: UInt32 = 0;
-    @Published var maxTemp: UInt32 = 0;
-    @Published var targetTemp: UInt32 = 0;
-    @Published var handleTemp: UInt32 = 0;
-    
+
     @Published private(set) var bleService: BLEManager = BLEManager()
     
-    init() {
-        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(update), userInfo: nil, repeats: true);
-    }
+    @Published private(set) var bulkService: BulkService = BulkService();
 
-    @objc func update() {
-        currentTemp = .random(in: 0...200);
-        maxTemp = max(maxTemp, currentTemp);
+    var cancel: AnyCancellable?;
+    var cancel2: AnyCancellable?;
+    
+    init() {
+        // not working wihout this
+        self.cancel = bulkService.objectWillChange.sink { [weak self] in
+            self?.objectWillChange.send();
+        }
+
+        // not working wihout this
+        self.cancel2 = bleService.objectWillChange.sink { [weak self] in
+            self?.objectWillChange.send();
+        }
+
+        bleService.attach(service: self.bulkService);
     }
 }
 

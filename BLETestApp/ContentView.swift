@@ -18,7 +18,7 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            MainTempView()
+                MainTempView(data: appState.bulkService)
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
                         Button(action: pair) {
@@ -38,8 +38,10 @@ struct ContentView: View {
                     }
                 }.sheet(isPresented: self.$showModal) {
                     NavigationView{
-                        Text("Test")
-                            .toolbar {
+                        VStack(alignment: .leading) {
+                            Text("Device SN: \(appState.bulkService.serial)");
+                            Text("OS Version: \(appState.bulkService.osVersion)");
+                        }.toolbar {
                                 ToolbarItem(placement:.navigationBarLeading) {
                                     Button(action: close_config) {
                                         Image(systemName: "arrow.backward");
@@ -51,7 +53,7 @@ struct ContentView: View {
                 }.sheet(isPresented: self.$showList) {
                     Section("Devices") {
                         List {
-                            ForEach(Array(appState.bleService.peripheralNames.keys), id: \.name) { peripheral in
+                            ForEach(appState.bleService.discoveredPeripherals, id: \.name) { peripheral in
                                 Button() {
                                     connect(to: peripheral);
                                 } label: {

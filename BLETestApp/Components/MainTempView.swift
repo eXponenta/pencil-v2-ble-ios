@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MainTempView: View {
-    @EnvironmentObject var state: AppState;
+    @ObservedObject var data: BulkService;
 
     var body: some View {
         VStack(alignment: .leading) {
@@ -17,7 +17,7 @@ struct MainTempView: View {
                 Text("Tip:")
                     .font(.system(size: 40))
                 HStack {
-                    Text("\(state.currentTemp)")
+                    Text("\(data.data.tipTemp)")
                         .frame(maxWidth: 140, alignment: .trailing)
                     Text("°C")
                         .frame(
@@ -32,11 +32,11 @@ struct MainTempView: View {
             VStack(alignment: .trailing) {
                 HStack() {
                     Text("Target:")
-                    Text("\(state.targetTemp)°C")
+                    Text("\(data.data.targetTemp)°C")
                 }
                 HStack() {
                     Text("Handle:")
-                    Text("\(state.handleTemp)°C")
+                    Text(String(format: "%.1f°C",Float(data.data.handleTemp) / 10.0))
                 }
             }
                 .font(.system(size: 24))
@@ -50,6 +50,6 @@ struct MainTempView: View {
 
 struct MainTempView_Previews: PreviewProvider {
     static var previews: some View {
-        MainTempView().environmentObject(AppState())
+        MainTempView(data: BulkService())
     }
 }
