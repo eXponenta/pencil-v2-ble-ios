@@ -13,6 +13,9 @@
 		DEAE81302A06CC7E002C97E4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEAE812F2A06CC7E002C97E4 /* Preview Assets.xcassets */; };
 		DEAE813A2A06D136002C97E4 /* MainTempView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAE81392A06D136002C97E4 /* MainTempView.swift */; };
 		DEAE813C2A06E390002C97E4 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAE813B2A06E390002C97E4 /* AppState.swift */; };
+		DEAE81402A07EA0A002C97E4 /* BLEManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAE813F2A07EA0A002C97E4 /* BLEManager.swift */; };
+		DEAE81422A07EF79002C97E4 /* BulkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAE81412A07EF79002C97E4 /* BulkService.swift */; };
+		DEAE81442A07EFA1002C97E4 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAE81432A07EFA1002C97E4 /* Service.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,9 @@
 		DEAE812F2A06CC7E002C97E4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DEAE81392A06D136002C97E4 /* MainTempView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTempView.swift; sourceTree = "<group>"; };
 		DEAE813B2A06E390002C97E4 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		DEAE813F2A07EA0A002C97E4 /* BLEManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEManager.swift; sourceTree = "<group>"; };
+		DEAE81412A07EF79002C97E4 /* BulkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulkService.swift; sourceTree = "<group>"; };
+		DEAE81432A07EFA1002C97E4 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +61,7 @@
 		DEAE81272A06CC7D002C97E4 /* BLETestApp */ = {
 			isa = PBXGroup;
 			children = (
+				DEAE813E2A07909B002C97E4 /* BLE */,
 				DEAE813D2A06F9A5002C97E4 /* State */,
 				DEAE81382A06CEA6002C97E4 /* Components */,
 				DEAE81282A06CC7D002C97E4 /* BLETestAppApp.swift */,
@@ -87,6 +94,16 @@
 				DEAE813B2A06E390002C97E4 /* AppState.swift */,
 			);
 			path = State;
+			sourceTree = "<group>";
+		};
+		DEAE813E2A07909B002C97E4 /* BLE */ = {
+			isa = PBXGroup;
+			children = (
+				DEAE813F2A07EA0A002C97E4 /* BLEManager.swift */,
+				DEAE81412A07EF79002C97E4 /* BulkService.swift */,
+				DEAE81432A07EFA1002C97E4 /* Service.swift */,
+			);
+			path = BLE;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,7 +177,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEAE812B2A06CC7D002C97E4 /* ContentView.swift in Sources */,
+				DEAE81442A07EFA1002C97E4 /* Service.swift in Sources */,
 				DEAE81292A06CC7D002C97E4 /* BLETestAppApp.swift in Sources */,
+				DEAE81402A07EA0A002C97E4 /* BLEManager.swift in Sources */,
+				DEAE81422A07EF79002C97E4 /* BulkService.swift in Sources */,
 				DEAE813A2A06D136002C97E4 /* MainTempView.swift in Sources */,
 				DEAE813C2A06E390002C97E4 /* AppState.swift in Sources */,
 			);
@@ -219,6 +239,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Required for connect to Pencil Iron stick";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -273,6 +294,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Required for connect to Pencil Iron stick";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;

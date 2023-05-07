@@ -7,23 +7,34 @@
 
 import SwiftUI
 
+import CoreBluetooth;
+
 struct ContentView: View {
     @State var showModal = false;
-
+    
+    @State var showList = false;
+    
+    @EnvironmentObject var appState: AppState;
+    
     var body: some View {
         NavigationView {
             MainTempView()
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
                         Button(action: pair) {
-                          Label("Pair", systemImage: "wifi.slash")
-                          Text("Connected")
-                      }.foregroundColor(.green)
+                            Label("Pair", systemImage: "wifi.slash")
+                            
+                            if case .connected(_) = appState.bleService.state {
+                                Text( "Connected")
+                            } else {
+                                Text( "Not connected")
+                            }
+                        }.foregroundColor(.green)
                     }
                     ToolbarItem(placement: .navigationBarTrailing) {
-                      Button(action: open_config) {
-                        Label("Config", systemImage: "gearshape.fill")
-                      }
+                        Button(action: open_config) {
+                            Label("Config", systemImage: "gearshape.fill")
+                        }
                     }
                 }.sheet(isPresented: self.$showModal) {
                     NavigationView{
@@ -37,13 +48,34 @@ struct ContentView: View {
                                 }
                             }
                     }
+                }.sheet(isPresented: self.$showList) {
+                    Section("Devices") {
+                        List {
+                            ForEach(Array(appState.bleService.peripheralNames.keys), id: \.name) { peripheral in
+                                Button() {
+                                    connect(to: peripheral);
+                                } label: {
+                                    Text(appState.bleService.peripheralNames[peripheral] ?? "Unknown")
+                                        .foregroundColor(.primary)
+                                }
+                            }
+                        }
+                    }
                 }
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }
     
+    func connect(to perepheral: CBPeripheral) {
+        appState.bleService.connect(to: perepheral);
+
+        self.showList = false;
+    }
+
     func pair() {
-        print("pair");
+        appState.bleService.scan();
+
+        self.showList.toggle();
     }
     
     func close_config() {

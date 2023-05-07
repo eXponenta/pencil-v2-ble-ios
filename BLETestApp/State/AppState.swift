@@ -13,6 +13,8 @@ class AppState: ObservableObject {
     @Published var targetTemp: UInt32 = 0;
     @Published var handleTemp: UInt32 = 0;
     
+    @Published private(set) var bleService: BLEManager = BLEManager()
+    
     init() {
         Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(update), userInfo: nil, repeats: true);
     }
